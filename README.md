@@ -1,5 +1,5 @@
 # Algorithms
-Theory and java implementation of famous Algorithms
+Theory and Go implementation of famous Algorithms (Work in progress)
 
 - Sorting
   - Merge Sort
