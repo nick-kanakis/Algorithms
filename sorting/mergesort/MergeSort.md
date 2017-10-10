@@ -17,11 +17,17 @@ It divides input array in two halves, calls itself for the two halves and then m
 Merge Step (Given 2 sorted Arrays)
 
 >	Have we reached the end of any of the arrays?
+>
 >	No:
+>
 >		Compare current elements of both arrays
+>
 >		Copy smaller element into sorted array
+>
 >		Move pointer of element containing smaller element
+>
 >	Yes:
+>
 >		Copy all remaining elements of non-empty array
 
 ## Time Complexity
@@ -45,17 +51,22 @@ Merge Step (Given 2 sorted Arrays)
 ## MergeSort Advantages.
 
 *Merge sort* is often the best choice for sorting a linked list: 
+
 In case of linked lists the case is different mainly due to difference in memory allocation of arrays and linked lists. 
 Unlike arrays, linked list nodes may not be adjacent in memory. 
-Unlike array, in linked list, we can insert items in the middle in `O(1)` extra space and `O(1)` time. 
+
+In linked list, we can insert items in the middle in `O(1)` extra space and `O(1)` time. 
 Therefore merge operation of *merge sort* can be implemented without extra space for linked lists.
 Unlike arrays, we can not do random access in linked list. 
+
 *Quick Sort* requires a lot of this kind of access. 
-In linked list to access i’th index, we have to travel each and every node from the head to i’th node as 
-we don’t have continuous block of memory. Therefore, the overhead increases for *quick sort*. 
+In linked list to access i'th index, we have to travel each and every node from the head to i'th node as 
+we donâ€™t have continuous block of memory. Therefore, the overhead increases for *quick sort*. 
+
 *Merge sort* accesses data sequentially and the need of random access is low.
 The slow random-access performance of a linked list makes some other algorithms (such as *quicksort*) perform poorly, 
 and others (such as *heapsort*) completely impossible.
+
 In Java, the `Arrays.sort()` methods use merge sort or a tuned *quicksort* depending on the datatypes
 
 
