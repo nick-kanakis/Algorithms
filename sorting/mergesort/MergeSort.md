@@ -14,6 +14,16 @@ It divides input array in two halves, calls itself for the two halves and then m
 3. Call mergeSort for second half
 4. Merge the two halves sorted in step 2 and 3
 
+Merge Step (Given 2 sorted Arrays)
+
+>	Have we reached the end of any of the arrays?
+>	No:
+>		Compare current elements of both arrays
+>		Copy smaller element into sorted array
+>		Move pointer of element containing smaller element
+>	Yes:
+>		Copy all remaining elements of non-empty array
+
 ## Time Complexity
 
 **Worst Case**
