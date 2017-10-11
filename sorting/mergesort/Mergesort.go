@@ -10,7 +10,7 @@ func Sort(initialArray []int) []int {
 	leftPartSorted := Sort(initialArray[:middle])
 	rightPartSorted := Sort(initialArray[middle:])
 
-	return merge(leftPartSorted, rightPartSorted)
+	return merge2(leftPartSorted, rightPartSorted)
 }
 
 /*
@@ -46,7 +46,6 @@ func merge(leftPartSorted []int, rightPartSorted []int) []int {
 			mergedArray = append(mergedArray, rightPartSorted[0])
 			rightPartSorted = rightPartSorted[1:]
 		}
-
 	}
 	return mergedArray
 }
@@ -55,6 +54,28 @@ func merge2(right []int, left []int) []int {
 
 	mergedResult := make([]int, 0, len(right)+len(left))
 
-	//todo
+	rightPointer := 0
+	leftPointer := 0
 
+	for leftPointer < len(left) && rightPointer < len(right) {
+
+		if right[rightPointer] > left[leftPointer] {
+			mergedResult = append(mergedResult, right[rightPointer])
+			leftPointer++
+		} else {
+			mergedResult = append(mergedResult, left[leftPointer])
+			rightPointer++
+		}
+	}
+	if rightPointer == len(right) - 1 && leftPointer < len(left){
+		for _,leftArrayRemainingElements:= range left[leftPointer:]{
+			mergedResult = append(mergedResult, leftArrayRemainingElements)
+		}
+
+	} else if leftPointer == len(left) - 1 && rightPointer < len(right) {
+		for _,rightArrayRemainingElements:= range right[rightPointer:]{
+			mergedResult = append(mergedResult, rightArrayRemainingElements)
+		}
+	}
+	return  mergedResult
 }
