@@ -25,8 +25,8 @@ After this partitioning, the pivot is in its final position. This is called the 
     1) Take two variables to point left and right of the list excluding pivot
     2) while value at left is less than pivot move right
     3) while value at right is greater than pivot move left
-    4) if both step 2 and step 3 does not match swap left and right 
-    5) if left ≥ right, the point where they met is new pivot, swap left with pivot
+    4) if left ≥ right, the point where they met is new pivot, swap left with pivot
+    5) else swap left and right 
 3) Recursively apply the above steps to the sub-array of elements with smaller values and separately
  to the sub-array of elements with greater values
 
