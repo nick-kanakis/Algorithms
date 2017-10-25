@@ -1,12 +1,12 @@
 # Algorithms
-Theory and Go implementation of famous Algorithms (Work in progress)
+Theory and Go implementation of famous algorithms (Work in progress)
 
 - Sorting
   - Merge Sort
   - Heapsort
   - Quicksort
   - Bubblesort
-  - Radix Sort
+  - Insertion Sort
 - Traversal
   - Depth First Search (Pre, In, Post order)
   - Breadth First Search
