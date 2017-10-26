@@ -1,16 +1,13 @@
 package BFS
 
 import (
-	"testing"
 	"personal/Algorithms/traversal"
-	"reflect"
+	"testing"
 )
 
-func TestBFS( t *testing.T){
+func TestBFS(t *testing.T) {
 
 	graph := traversal.CreateGraph()
-
-	correctResult := []int{1,2,3,4,5,6,7,8,9,0,0,0,0,0,0,0,0,0}
 
 	graph.AddNode(1)
 	graph.AddNode(2)
@@ -33,8 +30,11 @@ func TestBFS( t *testing.T){
 	graph.AddEdge(6, 8)
 	graph.AddEdge(6, 9)
 
-	keys := returnNodeValues(graph,1)
-	if reflect.DeepEqual(correctResult, keys){
-		t.Error()
+	keys := returnNodeValues(graph, 1)
+
+	for i:=0 ; i<= len(keys)-2; i++{
+		if keys[i] > keys[i+1] {
+			t.Error()
+		}
 	}
 }
