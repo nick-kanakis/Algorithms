@@ -1,5 +1,5 @@
 # Algorithms
-Theory and Go implementation of famous algorithms (Work in progress)
+Theory and Go implementation of famous algorithms 
 
 - Sorting
   - Merge Sort
@@ -11,5 +11,4 @@ Theory and Go implementation of famous algorithms (Work in progress)
   - Depth First Search (Pre, In, Post order)
   - Breadth First Search
   - Dijkstra
-  - A*
-  - BellmanFord
+
