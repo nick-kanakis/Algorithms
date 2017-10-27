@@ -7,7 +7,7 @@ type WeighedGraph struct {
 type WeighedNode struct {
 	Key       int
 	Visited   bool
-	neighbors map[*WeighedNode]int
+	Neighbors map[*WeighedNode]int
 }
 
 func CreateWeighedGraph() *WeighedGraph {
@@ -18,9 +18,9 @@ func CreateWeighedGraph() *WeighedGraph {
 
 func (graph *WeighedGraph) AddNode(key int) *WeighedNode {
 	newNode := &WeighedNode{
-		Key:     key,
-		Visited: false,
-		neighbors: make(map[*WeighedNode]int),
+		Key:       key,
+		Visited:   false,
+		Neighbors: make(map[*WeighedNode]int),
 	}
 
 	graph.Nodes[key] = newNode
@@ -42,7 +42,7 @@ func (graph *WeighedGraph) AddEdge(originKey, destinationKey, weight int) bool {
 		return false
 	}
 
-	originNode.neighbors[destinationNode] = weight
+	originNode.Neighbors[destinationNode] = weight
 	return true
 }
 
@@ -52,8 +52,8 @@ func (graph *WeighedGraph) GetNeighbors(key int) (map[*WeighedNode]int, bool) {
 	if !exists {
 		return nil, false
 	}
-	if len(node.neighbors) == 0 {
-		return node.neighbors , false
+	if len(node.Neighbors) == 0 {
+		return node.Neighbors, false
 	}
-	return node.neighbors, true
+	return node.Neighbors, true
 }
