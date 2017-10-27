@@ -20,8 +20,8 @@ is finalized (sptTree[] - shortest path tre)
     2) Mark U true in sptTree
     3) Iterate neighbors of U.
         1) If neighbor (V) is not finalized (contained in sptTree) && the total distance from src to V (dist[U] + distance(U,V))
-         is smaller than current value in dist[]
-        2) Update the dist value with new dist[U] + distance(U,V) 
+         is smaller than current value in dist[V]
+        2) Update the dist[V] value with new dist[U] + distance(U,V) 
 
 ## Time Complexity
 
