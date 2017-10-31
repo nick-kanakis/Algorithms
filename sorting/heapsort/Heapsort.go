@@ -17,6 +17,15 @@ func Sort(unsortedArray []int) {
 		// the slice of [start: len(originalArray -1] is the new heap that we need for our next iteration.
 		unsortedArray = unsortedArray[:lastChildPosition]
 	}
+
+	/* You can also do the same as above by using a pointer
+
+	pointer:= originalSize - 1
+	for pointer>=0 {
+		unsortedArray[0], unsortedArray[pointer] = unsortedArray[pointer], unsortedArray[0]
+		maxHeapify(unsortedArray[:pointer], 0)
+		pointer--
+	}*/
 }
 
 // For  size(OriginalArray)/2 to 0
@@ -27,7 +36,7 @@ func buildMaxHeap(unsortedArray []int) {
 	}
 }
 
-// 		Find the maxChild Of of the currentParent
+// 		Find the maxChild of the currentParent
 //		If you need to swap elements
 //			swap and call again the method for the maxChild in order to fix
 //			any problems from the previous step.
@@ -37,6 +46,28 @@ func maxHeapify(unsortedArray []int, i int) {
 	if maxChildPosition != -1 && unsortedArray[i] < unsortedArray[maxChildPosition] {
 		unsortedArray[i], unsortedArray[maxChildPosition] = unsortedArray[maxChildPosition], unsortedArray[i]
 		maxHeapify(unsortedArray, maxChildPosition)
+	}
+}
+
+// We create a sorted and a unsorted part in the initial array.
+// In each step we add (at the end) one element to the sorted path and call the heapifyUp method
+// to find the correct position for this element.
+func buildMaxHeap2(unsortedArray []int) {
+	for i := range unsortedArray {
+		heapifyUp(unsortedArray[:i])
+	}
+}
+func heapifyUp(unsortedArray []int) {
+	parentPointer := ((len(unsortedArray) - 1) - 1)/2
+	currentPointer := len(unsortedArray) - 1
+
+	for parentPointer >=0 {
+		if unsortedArray[currentPointer] > unsortedArray[parentPointer]{
+			unsortedArray[currentPointer], unsortedArray[parentPointer] = unsortedArray[parentPointer], unsortedArray[currentPointer]
+			parentPointer = (currentPointer - 1) /2
+		} else{
+			break;
+		}
 	}
 }
 

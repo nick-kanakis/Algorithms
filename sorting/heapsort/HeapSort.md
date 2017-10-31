@@ -36,7 +36,7 @@ takes `O(longn)` and is called `n` times so:
 
 Heapsort primarily competes with quicksort, another very efficient general purpose nearly-in-place comparison-based sort algorithm.
 
-Quicksort is typically somewhat faster due to some factors, but the worst-case running time for quicksort is O(n2), 
+Quicksort is typically somewhat faster due to some factors, but the worst-case running time for quicksort is O(n^2), 
 which is unacceptable for large data sets and can be deliberately triggered given enough knowledge of the implementation, creating a security risk.
 Because of the O(n log n) upper bound on heapsort's running time and constant upper bound on its auxiliary storage, 
 embedded systems with real-time constraints or systems concerned with security often use heapsort, such as the Linux kernel.
