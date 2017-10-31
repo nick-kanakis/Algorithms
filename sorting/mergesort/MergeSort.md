@@ -44,7 +44,7 @@ Merge Step (Given 2 sorted Arrays)
 
 `O(nlogn)`
 
-The entire input must be iterated through, and this must occur `O(log(n))` times (the input can only be halved `O(log(n))` times). 
+The entire input array must be iterated through, and this must occur `O(log(n))` times (the input array can only be halved `O(log(n))` times). 
 n items iterated log(n) times gives `O(n log(n))`.
 
 ## Space Complexity

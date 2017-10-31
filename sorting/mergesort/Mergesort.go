@@ -68,14 +68,10 @@ func merge2(right []int, left []int) []int {
 		}
 	}
 	if rightPointer == len(right) - 1 && leftPointer < len(left){
-		for _,leftArrayRemainingElements:= range left[leftPointer:]{
-			mergedResult = append(mergedResult, leftArrayRemainingElements)
-		}
+		mergedResult = append(mergedResult, left[leftPointer:]...)
 
 	} else if leftPointer == len(left) - 1 && rightPointer < len(right) {
-		for _,rightArrayRemainingElements:= range right[rightPointer:]{
-			mergedResult = append(mergedResult, rightArrayRemainingElements)
-		}
+		mergedResult = append(mergedResult, right[rightPointer:]...)
 	}
 	return  mergedResult
 }
