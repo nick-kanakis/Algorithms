@@ -6,7 +6,7 @@ import (
 )
 
 func TestSort(t *testing.T) {
-	initialArray := []int{9,8,7,6,5,4,3,2,1}
+	initialArray := []int{9,7,6,15,16,5,10,11}
 
 	fmt.Println(initialArray)
 	Sort(initialArray)
