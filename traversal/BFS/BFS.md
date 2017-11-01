@@ -14,7 +14,7 @@ before moving to the next level neighbours.
 2) Until queue is empty repeat
     1) Remove next node in queue
     2) Visit and enqueue all neighbours of the node
-    3) Go to 1 
+    3) Go to i 
 
 
 ## Time Complexity
