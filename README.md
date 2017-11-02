@@ -8,7 +8,7 @@ Theory and Go implementation of famous algorithms
   - Bubblesort
   - Insertion Sort
 - Traversal
-  - Depth First Search (Pre, In, Post order)
+  - Depth First Search
   - Breadth First Search
   - Dijkstra
 
