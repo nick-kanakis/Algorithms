@@ -11,11 +11,11 @@ func Sort(initialArray []int) {
 }
 
 func partition(initialArray []int) int {
-	pivot := len(initialArray)-1
+	pivot := len(initialArray) - 1
 	ptrFirstElementGreaterThanPivot := 0
 
 	// Pile elements smaller than the pivot on the left
-	for i:= range initialArray{
+	for i := range initialArray {
 		if initialArray[i] < initialArray[pivot] {
 			initialArray[i], initialArray[ptrFirstElementGreaterThanPivot] = initialArray[ptrFirstElementGreaterThanPivot], initialArray[i]
 			ptrFirstElementGreaterThanPivot++
@@ -23,5 +23,5 @@ func partition(initialArray []int) int {
 	}
 	// Place the pivot after the last smaller element
 	initialArray[ptrFirstElementGreaterThanPivot], initialArray[pivot] = initialArray[pivot], initialArray[ptrFirstElementGreaterThanPivot]
-	return ptrFirstElementGreaterThanPivot;
+	return ptrFirstElementGreaterThanPivot
 }

@@ -1,12 +1,12 @@
 package dijkstra
 
 import (
-	"testing"
-	"personal/Algorithms/traversal"
 	"fmt"
+	"personal/Algorithms/traversal"
+	"testing"
 )
 
-func TestDijkstra(t *testing.T){
+func TestDijkstra(t *testing.T) {
 
 	graph := traversal.CreateWeighedGraph()
 	graph.AddNode(0)
@@ -19,25 +19,25 @@ func TestDijkstra(t *testing.T){
 	graph.AddNode(7)
 	graph.AddNode(8)
 
-	graph.AddEdge(0,1,4)
-	graph.AddEdge(0,7,8)
-	graph.AddEdge(1,7,11)
-	graph.AddEdge(1,2,8)
-	graph.AddEdge(7,8,7)
-	graph.AddEdge(7,6,1)
-	graph.AddEdge(2,8,2)
-	graph.AddEdge(2,3,7)
-	graph.AddEdge(2,5,4)
-	graph.AddEdge(6,8,6)
-	graph.AddEdge(6,5,2)
-	graph.AddEdge(3,5,14)
-	graph.AddEdge(3,4,9)
-	graph.AddEdge(5,4,10)
+	graph.AddEdge(0, 1, 4)
+	graph.AddEdge(0, 7, 8)
+	graph.AddEdge(1, 7, 11)
+	graph.AddEdge(1, 2, 8)
+	graph.AddEdge(7, 8, 7)
+	graph.AddEdge(7, 6, 1)
+	graph.AddEdge(2, 8, 2)
+	graph.AddEdge(2, 3, 7)
+	graph.AddEdge(2, 5, 4)
+	graph.AddEdge(6, 8, 6)
+	graph.AddEdge(6, 5, 2)
+	graph.AddEdge(3, 5, 14)
+	graph.AddEdge(3, 4, 9)
+	graph.AddEdge(5, 4, 10)
 
 	sortestPaths := GetShortestPaths(graph, 0)
 
 	for key, value := range sortestPaths {
-		fmt.Println("From node 0 it takes",value, "to get to", key)
+		fmt.Println("From node 0 it takes", value, "to get to", key)
 	}
 
 	if sortestPaths[0] != 0 {
@@ -46,7 +46,7 @@ func TestDijkstra(t *testing.T){
 	if sortestPaths[1] != 4 {
 		t.Error()
 	}
-	if sortestPaths[2] !=12 {
+	if sortestPaths[2] != 12 {
 		t.Error()
 	}
 	if sortestPaths[3] != 19 {

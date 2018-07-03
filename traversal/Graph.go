@@ -26,7 +26,7 @@ func (graph *Graph) AddNode(key int) *Node {
 	return newNode
 }
 
-func (graph *Graph) GetNode(key int) *Node{
+func (graph *Graph) GetNode(key int) *Node {
 	return graph.Nodes[key]
 }
 

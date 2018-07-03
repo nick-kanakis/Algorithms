@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestPrivatePartition(t *testing.T){
+func TestPrivatePartition(t *testing.T) {
 
 	initialArray := []int{3, 60, 23, 82, 100, 4, 50, 40}
 
@@ -13,18 +13,18 @@ func TestPrivatePartition(t *testing.T){
 	partition(initialArray)
 	fmt.Println(initialArray)
 
-	for i:=0 ; i < 3; i++{
-		if initialArray[i] > 40{
+	for i := 0; i < 3; i++ {
+		if initialArray[i] > 40 {
 			t.Error()
 		}
 	}
 
-	if initialArray[3] != 40{
+	if initialArray[3] != 40 {
 		t.Error()
 	}
 
-	for i:=3 ; i < 7; i++{
-		if initialArray[i] < 40{
+	for i := 3; i < 7; i++ {
+		if initialArray[i] < 40 {
 			t.Error()
 		}
 	}
@@ -43,4 +43,3 @@ func TestSort(t *testing.T) {
 		}
 	}
 }
-

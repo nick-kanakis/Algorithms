@@ -32,7 +32,7 @@ func TestGraph(t *testing.T) {
 		t.Error()
 	}
 
-	if neighbors[0].Key != 2 ||neighbors[1].Key != 3{
+	if neighbors[0].Key != 2 || neighbors[1].Key != 3 {
 		t.Error()
 	}
 
@@ -41,7 +41,7 @@ func TestGraph(t *testing.T) {
 		t.Error()
 	}
 
-	if neighbors[0].Key != 4 ||neighbors[1].Key != 5{
+	if neighbors[0].Key != 4 || neighbors[1].Key != 5 {
 		t.Error()
 	}
 
@@ -59,7 +59,7 @@ func TestGraph(t *testing.T) {
 		t.Error()
 	}
 
-	if neighbors[0].Key != 5 ||neighbors[1].Key != 6{
+	if neighbors[0].Key != 5 || neighbors[1].Key != 6 {
 		t.Error()
 	}
 
@@ -77,7 +77,7 @@ func TestGraph(t *testing.T) {
 		t.Error()
 	}
 
-	if neighbors[0].Key != 8 ||neighbors[1].Key != 9{
+	if neighbors[0].Key != 8 || neighbors[1].Key != 9 {
 		t.Error()
 	}
 

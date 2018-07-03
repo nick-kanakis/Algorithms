@@ -1,8 +1,8 @@
 package DFS
 
 import (
-	"personal/Algorithms/traversal"
 	"fmt"
+	"personal/Algorithms/traversal"
 )
 
 type Stack struct {

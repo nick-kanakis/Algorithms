@@ -1,8 +1,8 @@
 package DFS
 
 import (
-	"testing"
 	"personal/Algorithms/traversal"
+	"testing"
 )
 
 func TestBFS(t *testing.T) {
@@ -26,7 +26,7 @@ func TestBFS(t *testing.T) {
 
 	keys := returnNodeValues(graph, 1)
 
-	for i:=0 ; i<= len(keys)-2; i++{
+	for i := 0; i <= len(keys)-2; i++ {
 		if keys[i] > keys[i+1] {
 			t.Error()
 		}
