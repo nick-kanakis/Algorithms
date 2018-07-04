@@ -4,7 +4,7 @@ func Sort(initialArray []int) {
 
 	swapped := true
 
-	for swapped == true {
+	for swapped{
 		swapped = false
 		for i := 1; i < len(initialArray); i++ {
 			if initialArray[i-1] < initialArray[i] {
