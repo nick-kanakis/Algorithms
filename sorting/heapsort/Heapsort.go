@@ -5,7 +5,7 @@ func Sort(unsortedArray []int) {
 	//Create a Max Heap
 	buildMaxHeap(unsortedArray)
 
-	originalSize := len(unsortedArray);
+	originalSize := len(unsortedArray)
 
 	//Swap root element with last child of unsorted port
 	//and re-heapify to fix the problem caused by the swap.
@@ -58,16 +58,12 @@ func buildMaxHeap2(unsortedArray []int) {
 	}
 }
 func heapifyUp(unsortedArray []int) {
-	parentPointer := ((len(unsortedArray) - 1) - 1)/2
+	parentPointer := ((len(unsortedArray) - 1) - 1) / 2
 	currentPointer := len(unsortedArray) - 1
 
-	for parentPointer >=0 {
-		if unsortedArray[currentPointer] > unsortedArray[parentPointer]{
-			unsortedArray[currentPointer], unsortedArray[parentPointer] = unsortedArray[parentPointer], unsortedArray[currentPointer]
-			parentPointer = (currentPointer - 1) /2
-		} else{
-			break;
-		}
+	for parentPointer >= 0  && unsortedArray[currentPointer] > unsortedArray[parentPointer] {
+		unsortedArray[currentPointer], unsortedArray[parentPointer] = unsortedArray[parentPointer], unsortedArray[currentPointer]
+		parentPointer = (currentPointer - 1) / 2
 	}
 }
 

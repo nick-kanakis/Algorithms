@@ -62,7 +62,7 @@ func TestPrivateBuildMaxHeap(t *testing.T) {
 
 	for i := len(heap) - 1; i >= 0; i-- {
 		parentPosition := (i - 1) / 2
-		if (heap[i] > heap[parentPosition]) {
+		if heap[i] > heap[parentPosition] {
 			t.Error()
 		}
 	}
