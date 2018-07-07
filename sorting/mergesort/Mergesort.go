@@ -3,10 +3,10 @@ package mergesort
 func Sort(initialArray []int) []int {
 
 	if len(initialArray) <= 1 {
-		return initialArray;
+		return initialArray
 	}
 
-	middle := len(initialArray) / 2;
+	middle := len(initialArray) / 2
 	leftPartSorted := Sort(initialArray[:middle])
 	rightPartSorted := Sort(initialArray[middle:])
 
@@ -67,11 +67,11 @@ func merge2(right []int, left []int) []int {
 			rightPointer++
 		}
 	}
-	if rightPointer == len(right) - 1 && leftPointer < len(left){
+	if rightPointer == len(right)-1 && leftPointer < len(left) {
 		mergedResult = append(mergedResult, left[leftPointer:]...)
 
-	} else if leftPointer == len(left) - 1 && rightPointer < len(right) {
+	} else if leftPointer == len(left)-1 && rightPointer < len(right) {
 		mergedResult = append(mergedResult, right[rightPointer:]...)
 	}
-	return  mergedResult
+	return mergedResult
 }

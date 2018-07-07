@@ -53,16 +53,14 @@ n items iterated log(n) times gives `O(n log(n))`.
 
 ## MergeSort Advantages.
 
-*Merge sort* is often the best choice for sorting a linked list: 
-
+*Merge sort* is often the best choice for sorting a linked list because it does not need random access to elements. 
 In case of linked lists the case is different mainly due to difference in memory allocation of arrays and linked lists. 
 Unlike arrays, linked list nodes may not be adjacent in memory. 
-
 In linked list, we can insert items in the middle in `O(1)` extra space and `O(1)` time. 
 Therefore merge operation of *merge sort* can be implemented without extra space for linked lists.
 Unlike arrays, we can not do random access in linked list. 
 
-*Quick Sort* requires a lot of this kind of access. 
+*Quick Sort* requires a lot of this kind of access, so it is better suited for sorting arrays. 
 In linked list to access i'th index, we have to travel each and every node from the head to i'th node as 
 we don’t have continuous block of memory. Therefore, the overhead increases for *quick sort*. 
 
@@ -70,7 +68,8 @@ we don’t have continuous block of memory. Therefore, the overhead increases fo
 The slow random-access performance of a linked list makes some other algorithms (such as *quicksort*) perform poorly, 
 and others (such as *heapsort*) completely impossible.
 
-In Java, the `Arrays.sort()` methods use merge sort or a tuned *quicksort* depending on the datatypes
+In Java, the `Arrays.sort()` methods use merge sort or a tuned *quicksort* depending on the datatypes.
+
 
 
 

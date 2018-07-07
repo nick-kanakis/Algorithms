@@ -1,8 +1,8 @@
 package mergesort
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestSort(t *testing.T) {
