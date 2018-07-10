@@ -12,7 +12,7 @@ and explores as far as possible along each branch before backtracking.
 2) Until stack is empty repeat
     1) Pop next node from stack
     2) Mark node as visited 
-    3) Push all neighbors of the node in stack (IN REVERSE), if they are not already visited
+    3) Push all neighbors of the node in stack (IN REVERSE), if they are not already visited.
     4) Go to 1 
     
 ## Time Complexity
@@ -21,6 +21,15 @@ and explores as far as possible along each branch before backtracking.
 
 `O(|V|+|E|)`
 
+All vertices and edges will be explored at the worst case so time complexity is O(|V|+|E|)
+OR:
+
+>>> Incident edge is the edge that connects 2 nodes
+
+v1 + (incident edges) + v2 + (incident edges) + .... + vn + (incident edges) = 
+(v1 + v2 + ... + vn) + [(incident_edges v1) + (incident_edges v2) + ... + (incident_edges vn)] =
+O(|V|)+O(|E|) = O(|V|+|E|)
+
 Where 
 |V| = # vertices
 |E| = # edges
@@ -28,7 +37,9 @@ Where
 
 ## Space Complexity
 
-`O(|V|)`
+`O(|V|)` 
+
+All nodes will be enqueued and dequeued so the space complexity is O(|V|)
 
 Where 
 |V| = # vertices
