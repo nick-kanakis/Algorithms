@@ -10,13 +10,15 @@ but a more common variant fixes a single node as the "source" node and finds sho
 producing a shortest-path tree.
 
 **Algorithm**:
+In general alwayes select the "Cheapest" path, and expand the edge node, until there is no node left to go to.
+
 1) Given a starting point create an array of (#NODES_OF_GRAPH) that will hold the shortest distance from source to i-node (dist[])
 2) Create another array of (#NODES_OF_GRAPH) that will hold a boolean value for each node, if true node's i distance from SOURCE_NODE
 is finalized (sptTree[] - shortest path tre)
 3) Initialize the 2 arrays with infinity & false respectively.
 4) The distance of source -> source is 0 (probably)
 5) for i =0 to #NODES_OF_GRAPH -1
-    1) Pick the minimum distance node (e.g. U) for the nodes in sptTree that are not yet processed.
+    1) Pick the minimum distance node e.g. U (from the minimum distance array) that is not finalized ( from the finalize array).
     2) Mark U true in sptTree
     3) Iterate neighbors of U.
         1) If neighbor (V) is not finalized (contained in sptTree) && the total distance from src to V (dist[U] + distance(U,V))
@@ -27,7 +29,12 @@ is finalized (sptTree[] - shortest path tre)
 
 **Worst Case**
 
-`O(|E| + |V|log|V|)`
+In general: `O(|E| + |V|log|V|)`
+
+For connected graph: `O(|E|log|V|)`
+
+To get the next minimum non-final node from the array you need O(log|V|) using a heap.
+This needs to be done for all edges of the graph so |E| so the result total time complexity: `O(|E|log|V|)`
 
 Where 
 |V| = # vertices
