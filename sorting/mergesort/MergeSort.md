@@ -51,6 +51,7 @@ n items iterated log(n) times gives `O(n log(n))`.
 
 `O(n)`
 
+
 ## MergeSort Advantages.
 
 *Merge sort* is often the best choice for sorting a linked list because it does not need random access to elements. 

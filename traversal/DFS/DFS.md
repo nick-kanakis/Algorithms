@@ -44,7 +44,12 @@ All nodes will be enqueued and dequeued so the space complexity is O(|V|)
 Where 
 |V| = # vertices
 
-##  Advantages.
+##  Advantages over BFS
+
+1) If tree is very wide (each node has a lot of children) BFS will take a lot of time so DFS 
+might be a better option
+
+2) If solutions are frequent but located deep in the tree DFS is preferred.
 
 
 

@@ -47,6 +47,6 @@ As we said in the beginning Insertion sort is not the most efficient algorithm. 
 4) In-place; i.e., only requires a constant amount O(1) of additional memory space
 5) Online; i.e., can sort a list as it receives it
 
-Insertion sort is better that bubblesort (another easy but slow sorting algo) because it stops iterating when the element is in the correct position.
+Insertion sort is better that bubblesort (another easy but slow sorting algo) because it stops iterating when the element is in the correct position. Also like bubblesort it requires O(n) to sort a sorted array.
 
 Insertion sort will usually perform about half as many comparisons as selection sort, although it can perform just as many or far fewer depending on the order the array was in prior to sorting.

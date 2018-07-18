@@ -42,10 +42,13 @@ Where
 
 ## Space Complexity
 
-`O(V^2)`
+`O(|V|^2)`
 
 Where 
 |V| = # vertices
+
+At worst case I have to hold in memory all nodes and edges O(|V|+|E|) but in worst case |E| = |V^2| since
+each node can connect to each other node so  O(|V|+|E|) =  O(|V|^2) 
 
 ##  Usages.
 

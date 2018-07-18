@@ -69,6 +69,10 @@ In case you always select the min/max as the pivot, so you will divide O(n) time
 
 In most cases you will not peek the min/max every time, so you will divide the array in O(logn) times
 
+Why `O(nlogn)` ?
+
+We divide the array ~ logn times O(logn) and for each subarray we need to do n-1 comparisons O(n). 
+
 ## Space Complexity
 
 `O(logn)` (due to recursive calls)

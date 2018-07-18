@@ -15,7 +15,7 @@ In every iteration of selection sort, the minimum element (considering ascending
 
 1) FirstPtrOfUnsortedPart points to the 0 at the beginning, it marks the first element of the unsorted part of the array and it moves by one to the right at each iteration
 2) Find the minimum element of the unsorted part 
-3) Replace FirstPtrOfUnsortedPart with minimum element anf move FirstPtrOfUnsortedPart by one (to the rigt)
+3) Replace FirstPtrOfUnsortedPart with minimum element and move FirstPtrOfUnsortedPart by one (to the right)
 4) Repeat until FirstPtrOfUnsortedPart is equal to array size-1 (no more elements in the unsorted part)
 
 ## Time Complexity
